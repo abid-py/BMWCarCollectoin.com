@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Next Page of Main App
+{% endblock %}
+
+
+
+{% block content %}
+<h1> "nextproject" </h1>
+
+
+
+
+
+<div class="container m-4">
+    <h1 class="my-2" style="font-size: 4rem;">{{rohan.Name}}</h1>
+    <style>
+        .tab {
+            overflow: hidden;
+            border-bottom: 1px solid #cc4646;
+        }
+    </style>
+    <div class="tab my-4"></div>
+    <div>
+        <img src="{{rohan.Image.url}}" alt="" style="width: 500px; border-radius: 15px; margin-right: 10px; ">
+        <img src="{{rohan.inside_car.url}}" alt=""
+            style="width: 220px;border-radius: 15px; margin-left: 510px; position: relative; top: -280px;">
+        <img src="{{rohan.backside_car.url}}" alt=""
+            style="width: 220px;border-radius: 15px;margin-left: 510px; position: relative; top: -270px;">
+        <div style="position: relative; top: -250px; ">
+            <h1 class="my-2">
+                {{rohan.Description}}
+            </h1>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="button"
+    style="display: flex; justify-content: center; flex-wrap: wrap; flex-direction: row; margin-top: -100px; margin-bottom: 100px;">
+    <a href="{% url 'mainproject' %}">
+        <button type="button" class="gap-4 h-9 w-16"
+            style="margin:6px; color: aliceblue; border-radius: 15%; background-color: #67a1ff;">Back</button>
+    </a>
+
+</div>
+
+{% endblock %}
